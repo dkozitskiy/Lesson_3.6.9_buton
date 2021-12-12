@@ -7,7 +7,7 @@ def test_guest_should_see_add_to_basket_button(browser):
         browser.get(link)
         time.sleep(10)
         btn = browser.find_element_by_css_selector(".btn-add-to-basket")
-        assert btn
+        assert btn, "Add to basket button is missing on this page"
         print("!!" * 20)
         print(f"Текст на кнопке: '{btn.text}'")
         print("!!" * 20)
